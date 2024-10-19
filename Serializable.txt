@@ -1,0 +1,22 @@
+Serialization is the process of converting an object into a byte stream, which can then be easily saved to a file, sent over a network, or stored in a database. In the context of uploading chunks of files to a cloud storage service, serialization can be usefull for several reasons. Here's how serialization can be implemented in the context of the chunking process, along with the benefits it provides.
+
+How to use Serialization in Chunking
+
+1. Define Serializable classes: For serialization to work, the classes you want to serialize must implement the java.io.Serializable interface. In our case, the Chunk class would need to implement this interface.
+
+2. Serialize and Deserialize Chunks: You can serialize chunks when uploading them to a cloud service, and deserialize them when you need to reconstruct the file.
+
+
+Why use Serialization in this context
+1. Network Transfer: When uploading chunks to a cloud service, serialization allows you to convert the Chunk object into a format suitable for transmission. This is especially useful if you need to send complex objects(e.g. with metadata) across a network.
+
+2. Persistence: Serialized objects can be stored in files or databases. This can be useful for saving the state of chunks if the upload process is interrupted, allowing for resuming uploads without losing data.
+
+3. Object Integrity:
+Serialization maintains the structure of the object, ensuring that all necessary data (like the chunk's index, data and hash) is preserved and can be easily reconstructed.
+
+4. Ease of Use:
+With serialization, you don't need to manually convert objects fields into a byte stream. The serialization framework handles this for you, reducing the complexity of your code.
+
+5. Cross-Platform Compatibility:
+Serialized objects can be sent to different systems(even different programming languages, depending on the serialization format), making it easier to integrate with various platforms.
