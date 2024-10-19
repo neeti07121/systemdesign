@@ -2,7 +2,7 @@ Serialization is the process of converting an object into a byte stream, which c
 
 How to use Serialization in Chunking
 
-1. Define Serializable classes: For serialization to work, the classes you want to serialize must implement the java.io.Serializable interface. In our case, the Chunk class would need to implement this interface.
+1. **Define Serializable classes:** For serialization to work, the classes you want to serialize must implement the java.io.Serializable interface. In our case, the Chunk class would need to implement this interface.
 
 2. Serialize and Deserialize Chunks: You can serialize chunks when uploading them to a cloud service, and deserialize them when you need to reconstruct the file.
 
